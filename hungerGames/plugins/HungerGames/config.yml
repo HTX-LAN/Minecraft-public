@@ -92,7 +92,7 @@ world-border:
     # (ex: if countdown-start = 60 and countdown-end = 55, once the border starts, the border will shrink to the centre in 5 seconds)
     countdown-end: 60
     # Final border size from the centre outward
-    final-border-size: 880
+    final-border-size: 30
     # If true, the centre of the arena will be based on the first spawn location you set
     # If false, the centre will be calculated by the centre of the arena
     center-on-first-spawn: true
