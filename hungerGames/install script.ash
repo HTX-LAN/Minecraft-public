@@ -2,8 +2,7 @@
 # Paper Installation Script
 #
 # Server Files: /mnt/server
-apk add --no-cache --update curl jq
-apt-get install git
+apk add --no-cache --update curl jq git
 
 if [ -n "${DL_PATH}" ]; then
     echo -e "using supplied download url"
@@ -85,21 +84,14 @@ curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hun
 echo "Setting Eula"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/eula.txt -o eula.txt
 echo "----------------- Installing Plugins ----------------------------"
+echo "Creating directories"
+[ -d "Lan-World/" ] && rm -r Lan-World
+[ -d "tmpMapClone/" ] && rm -r tmpMapClone
 echo "Downloading required files"
-if [ ! -d "tmpMapClone/" ]; then
-    mkdir tmpMapClone/
-    cd tmpMapClone/
-    git clone https://htxlan:0e03fee93220011d60f4a8bb0ee13105a4d37850@github.com/HTX-LAN/Minecraft.git
-    cp Minecraft/Hunger-games/Lan-World-2 ../Lan-World
-    cd ../
-    rm -r tmpMapClone
-else 
-    rm -r tmpMapClone
-    mkdir tmpMapClone/
-    cd tmpMapClone/
-    git clone https://htxlan:0e03fee93220011d60f4a8bb0ee13105a4d37850@github.com/HTX-LAN/Minecraft.git
-    cp Minecraft/Hunger-games/Lan-World-2 ../Lan-World
-    cd ../
-    rm -r tmpMapClone
-fi
+mkdir tmpMapClone/
+git clone https://htxlan:HyV8utX37tQEYbTm@github.com/HTX-LAN/Minecraft.git tmpMapClone/
+echo "Moving map files"
+cp -r tmpMapClone/Hunger-games/Lan-World-2 Lan-World
+echo "Cleaning up"
+rm -r tmpMapClone
 echo "Map installed successfully"
