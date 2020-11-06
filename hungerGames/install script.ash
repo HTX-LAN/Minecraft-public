@@ -66,7 +66,7 @@ curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hun
 echo "Installing HungerGames"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames.jar -o plugins/HungerGames.jar
 echo "Creating configuration for HungerGames"
-[ ! -d "plugins/HungerGames/" ] &&  mkdir HungerGames
+[ ! -d "plugins/HungerGames/" ] &&  mkdir plugins/HungerGames
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames/arenas.yml -o plugins/HungerGames/arenas.yml
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames/config.yml -o plugins/HungerGames/config.yml
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames/items.yml -o plugins/HungerGames/items.yml
@@ -81,3 +81,5 @@ curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hun
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsXChat.jar -o plugins/EssentialsXChat.jar
 echo "Installing antiCheat"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/NoCheatPlus.jar -o plugins/NoCheatPlus.jar
+echo "Setting Eula"
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/eula.txt -o eula.txt
