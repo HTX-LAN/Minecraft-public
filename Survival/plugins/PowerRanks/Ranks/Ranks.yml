@@ -1,0 +1,181 @@
+Default: Member
+Groups:
+    Member:
+        permissions: 
+        - essentials.spawn
+        - essentials.afk
+        - essentials.help
+        - essentials.msg
+        - essentials.list
+        - essentials.tpa
+        - essentials.delhome
+        - essentials.home
+        - essentials.sethome
+        - essentials.sethome.bed
+        - essentials.home.bed
+        - essentials.tpahere
+        - essentials.tpaccept
+        - essentials.tpdeny
+        - essentials.warp
+        - essentials.warp.list
+        interance: []
+        prefix: '[&aMember&r]'
+        chat:
+            prefix: '[&aMember&r]'
+            suffix: ''
+            chatColor: '&f'
+            nameColor: '&f'
+        level:
+            promote: Builder
+            demote: Member
+    Builder:
+        permissions: 
+        - essentials.spawn
+        - essentials.afk
+        - essentials.help
+        - essentials.msg
+        - essentials.list
+        - essentials.tpa
+        - essentials.delhome
+        - essentials.home
+        - essentials.sethome
+        - essentials.sethome.bed
+        - essentials.home.bed
+        - essentials.tpahere
+        - essentials.tpaccept
+        - essentials.tpdeny
+        - essentials.warp
+        - essentials.warp.list
+        - multiworld.command.goto ​
+        - mycommand.gm
+        - essentials.gamemode
+        interance: []
+        chat:
+            prefix: '[&1Builder&r]'
+            suffix: ''
+            chatColor: '&f'
+            nameColor: '&f'
+        level:
+            promote: Moderator
+            demote: Member
+    Moderator:
+        permissions: 
+        - essentials.spawn
+        - essentials.afk
+        - essentials.afk.auto
+        - essentials.help
+        - essentials.msg
+        - essentials.list
+        - essentials.helpop
+        - essentials.mute
+        - essentials.kick
+        - essentials.tempban
+        - essentials.tp
+        - essentials.tpa
+        - essentials.delhome
+        - essentials.home
+        - essentials.sethome
+        - essentials.sethome.bed
+        - essentials.home.bed
+        - essentials.tpahere
+        - essentials.tpaccept
+        - essentials.tpdeny
+        - essentials.warp
+        - essentials.warp.list
+        interance: []
+        prefix: '[&3&lModerator&r]'
+        chatColor: WHITE
+        nameColor: RESET
+        chat:
+            prefix: '[&3Moderator&r]'
+            suffix: ''
+            chatColor: '&f'
+            nameColor: '&f'
+        level:
+            promote: Admin
+            demote: Builder
+    Admin:
+        permissions: 
+        - essentials.spawn
+        - essentials.afk
+        - essentials.afk.auto
+        - essentials.help
+        - essentials.msg
+        - essentials.list
+        - essentials.helpop
+        - essentials.mute
+        - essentials.kick
+        - essentials.tempban
+        - essentials.ban
+        - essentials.pardon
+        - essentials.tp
+        - essentials.fly
+        - essentials.tphere
+        - essentials.gamemode
+        - essentials.msg.color
+        - essentials.msg.format
+        - essentials.msg.magic
+        - essentials.msg.url
+        - essentials.whois
+        - essentials.recipe
+        - essentials.back
+        - essentials.clearinventory
+        - essentials.banip
+        - essentials.chat.color
+        - essentials.chat.format
+        - essentials.chat.magic
+        - essentials.chat.question
+        - essentials.chat.shout
+        - essentials.chat.url
+        - essentials.spawn
+        - essentials.afk
+        - essentials.afk.auto
+        - essentials.help
+        - essentials.msg
+        - essentials.list
+        - essentials.helpop
+        - essentials.mute
+        - essentials.kick
+        - essentials.tempban
+        - essentials.tp
+        - essentials.tpa
+        - essentials.delhome
+        - essentials.home
+        - essentials.sethome
+        - essentials.sethome.bed
+        - essentials.home.bed
+        - essentials.tpahere
+        - essentials.tpaccept
+        - essentials.tpdeny
+        - essentials.warp
+        - essentials.warp.list
+        - powerranks.cmd.setrank
+        - mycommand.*
+        interance: []
+        prefix: '[&cAdmin&r]'
+        chatColor: RESET
+        nameColor: RESET
+        chat:
+            prefix: '[&cModerator&r]'
+            suffix: ''
+            chatColor: '&f'
+            nameColor: '&c'
+        level:
+            promote: Owner
+            demote: Moderator
+    Owner:
+        permissions: 
+        - essentials.*
+        - powerranks.*
+        interance: []
+        prefix: '[&4Owner&r]'
+        chatColor: RESET
+        nameColor: RESET
+        chat:
+            prefix: '[&4Owner&r]'
+            suffix: ''
+            chatColor: '&f'
+            nameColor: '&f'
+        level:
+            demote: Admin
+    
