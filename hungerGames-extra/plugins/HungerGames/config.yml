@@ -32,7 +32,7 @@ random-chest:
   interval: 30
   max-chestcontent: 9
 rollback:
-  allow-block-break: false
+  allow-block-break: true
   blocks-per-second: 500
   protect-during-cooldown: true
   fix-leaves: true
@@ -58,5 +58,3 @@ mcmmo:
   use-skills: false
   gain-experience: false
 kits:
-  None:
-    permission: none

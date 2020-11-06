@@ -9,12 +9,16 @@ arenas:
       y2: 255
       z2: -199
     info:
+      cost: 0
       timer: 1800
-      min-players: 23
+      min-players: 4
       max-players: 23
     commands:
     - none
     lobbysign: world:4:223:-338
+    border:
+      center: world:5:71:-325
+      size: 250
     spawns:
     - world:-11:73:-322:-100.549255:2.098718
     - world:-9:73:-318:-116.34314:3.252169
@@ -38,6 +42,3 @@ arenas:
     - world:-5:73:-338:-38.2323:-2.2757628
     - world:-8:73:-334:-54.116943:-3.2517087
     - world:-10:73:-330:-71.50757:-1.210983
-    border:
-      center: world:5:71:-325
-      size: 250
