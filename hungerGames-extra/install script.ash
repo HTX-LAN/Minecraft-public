@@ -62,9 +62,9 @@ echo "Installing hungerGames"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/hungerGames.jar -o plugins/hungerGames.jar
 echo "Creating configuration for hungerGames"
 [ ! -d "plugins/hungerGames/" ] &&  mkdir plugins/hungerGames
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/hungerGames/arenas.yml -o plugins/hungerGames/arenas.yml
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/hungerGames/config.yml -o plugins/hungerGames/config.yml
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/hungerGames/items.yml -o plugins/hungerGames/items.yml
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames/arenas.yml -o plugins/hungerGames/arenas.yml
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames/config.yml -o plugins/hungerGames/config.yml
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames/items.yml -o plugins/hungerGames/items.yml
 echo "Installing WorldEdit"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/worldedit.jar -o plugins/wordedit.jar
 echo "Installing worldGuard"
