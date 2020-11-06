@@ -59,6 +59,7 @@ echo "Creating configuration for PowerRanks"
 [ ! -d "plugins/PowerRanks/" ] && mkdir plugins/PowerRanks
 [ ! -d "plugins/PowerRanks/Ranks/" ] && mkdir plugins/PowerRanks/Ranks
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/plugins/PowerRanks/Ranks/Ranks.yml -o plugins/PowerRanks/Ranks/Ranks.yml
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/plugins/Ranks/Ranks.yml
 echo "Installing WorldEdit"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/plugins/worldedit.jar -o plugins/wordedit.jar
 echo "Installing worldGuard"
