@@ -46,11 +46,11 @@ curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
 
 if [ ! -f server.properties ]; then
     echo -e "Downloading MC server.properties"
-    curl -o server.properties https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/server.properties
+    curl -o server.properties https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/server.properties
 fi
 if [ ! -f server-icon.png ]; then
     echo "Setting up server icon"
-    curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/server-icon.png -o server-icon.png
+    curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/server-icon.png -o server-icon.png
 fi
 
 #install plugins
@@ -62,17 +62,17 @@ curl -L -s https://github.com/svenar-nl/PowerRanks/releases/download/0.1.6/Power
 echo "Creating configuration for PowerRanks"
 [ ! -d "plugins/PowerRanks/" ] && mkdir plugins/PowerRanks
 [ ! -d "plugins/PowerRanks/Ranks/" ] && mkdir plugins/PowerRanks/Ranks
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/PowerRanks/Ranks/Ranks.yml -o plugins/PowerRanks/Ranks/Ranks.yml
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/plugins/PowerRanks/Ranks/Ranks.yml -o plugins/PowerRanks/Ranks/Ranks.yml
 echo "Installing WorldEdit"
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/worldedit.jar -o plugins/wordedit.jar
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/plugins/worldedit.jar -o plugins/wordedit.jar
 echo "Installing worldGuard"
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/worldguard.jar -o plugins/worldguard.jar
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/plugins/worldguard.jar -o plugins/worldguard.jar
 echo "Installing Multiverse-core"
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/multiverse-core.jar -o plugins/multiverse-core.jar
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/plugins/multiverse-core.jar -o plugins/multiverse-core.jar
 echo "Installing EssentialsX"
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsX.jar -o plugins/EssentialsX.jar
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsXChat.jar -o plugins/EssentialsXChat.jar
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/plugins/EssentialsX.jar -o plugins/EssentialsX.jar
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/plugins/EssentialsXChat.jar -o plugins/EssentialsXChat.jar
 echo "Installing antiCheat"
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/NoCheatPlus.jar -o plugins/NoCheatPlus.jar
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/plugins/NoCheatPlus.jar -o plugins/NoCheatPlus.jar
 echo "Setting Eula"
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/eula.txt -o eula.txt
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/eula.txt -o eula.txt
