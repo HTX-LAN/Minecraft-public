@@ -75,10 +75,10 @@ echo "Installing EssentialsX"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsX.jar -o plugins/EssentialsX.jar
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsXChat.jar -o plugins/EssentialsXChat.jar
 echo "Installing antiCheat"
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/NoCheatPlus.jar -o plugins/NoCheatPlus.jar
+curl -L -s https://github.com/Rammelkast/AntiCheatReloaded/releases/download/1.9.5/AntiCheatReloaded.jar -o plugins/AntiCheatReloaded.jar
 echo "Setting Eula"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/eula.txt -o eula.txt
-echo "----------------- Installing Plugins ----------------------------"
+echo "----------------- Installing map ----------------------------"
 echo "Creating directories"
 [ -d "Lan-World/" ] && rm -r Lan-World
 [ -d "tmpMapClone/" ] && rm -r tmpMapClone
