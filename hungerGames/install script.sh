@@ -57,15 +57,19 @@ fi
 echo "----------------- Installing Plugins ----------------------------"
 echo "Creating plugin folder"
 [ ! -d "plugins/" ] &&  mkdir plugins
-#echo "Installing powerRanks"
-#curl -L -s https://github.com/svenar-nl/PowerRanks/releases/download/0.1.6/PowerRanks.jar -o plugins/PowerRanks.jar
-#echo "Creating configuration for PowerRanks"
-#[ ! -d "plugins/PowerRanks/" ] && mkdir plugins/PowerRanks
-#[ ! -d "plugins/PowerRanks/Ranks/" ] && mkdir plugins/PowerRanks/Ranks
-#curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/PowerRanks/Ranks/Ranks.yml -o plugins/PowerRanks/Ranks/Ranks.yml
+echo "Installing powerRanks"
+curl -L -s https://github.com/svenar-nl/PowerRanks/releases/download/0.1.6/PowerRanks.jar -o plugins/PowerRanks.jar
+echo "Creating configuration for PowerRanks"
+[ ! -d "plugins/PowerRanks/" ] && mkdir plugins/PowerRanks
+[ ! -d "plugins/PowerRanks/Ranks/" ] && mkdir plugins/PowerRanks/Ranks
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/PowerRanks/Ranks/Ranks.yml -o plugins/PowerRanks/Ranks/Ranks.yml
 echo "Installing HungerGames"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames.jar -o plugins/HungerGames.jar
 echo "Creating configuration for HungerGames"
+[ ! -d "plugins/HungerGames/" ] &&  mkdir HungerGames
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames/arenas.yml -o plugins/HungerGames/arenas.yml
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames/config.yml -o plugins/HungerGames/config.yml
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames/items.yml -o plugins/HungerGames/items.yml
 echo "Installing WorldEdit"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/worldedit.jar -o plugins/wordedit.jar
 echo "Installing worldGuard"
@@ -76,4 +80,4 @@ echo "Installing EssentialsX"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsX.jar -o plugins/EssentialsX.jar
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsXChat.jar -o plugins/EssentialsXChat.jar
 echo "Installing antiCheat"
-#curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/NoCheatPlus.jar -o plugins/NoCheatPlus.jar
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/NoCheatPlus.jar -o plugins/NoCheatPlus.jar
