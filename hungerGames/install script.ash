@@ -44,15 +44,10 @@ fi
 
 curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
 
-if [ ! -f server.properties ]; then
-    echo -e "Downloading MC server.properties"
-    curl -o server.properties https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/server.properties
-fi
-if [ ! -f server-icon.png ]; then
-    echo "Setting up server icon"
-    curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/server-icon.png -o server-icon.png
-fi
-
+echo -e "Downloading MC server.properties"
+curl -o server.properties https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/server.properties
+echo "Setting up server icon"
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/BuildBattle/server-icon.png -o server-icon.png
 #install plugins
 echo "----------------- Installing Plugins ----------------------------"
 echo "Creating plugin folder"
