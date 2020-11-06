@@ -53,7 +53,7 @@ echo "----------------- Installing Plugins ----------------------------"
 echo "Creating plugin folder"
 [ ! -d "plugins/" ] &&  mkdir plugins
 echo "Installing powerRanks"
-curl -L -s https://github.com/svenar-nl/PowerRanks/releases/download/0.1.6/PowerRanks.jar -o plugins/PowerRanks.jar
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/PowerRanks.jar -o plugins/PowerRanks.jar
 echo "Creating configuration for PowerRanks"
 [ ! -d "plugins/PowerRanks/" ] && mkdir plugins/PowerRanks
 [ ! -d "plugins/PowerRanks/Ranks/" ] && mkdir plugins/PowerRanks/Ranks
