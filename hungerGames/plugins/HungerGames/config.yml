@@ -79,18 +79,18 @@ rollback:
 # - Will not work if the world is used for other purposes - Will kill players outside of the arena
 world-border:
     # Enable the world borders for arenas
-    enabled: false
+    enabled: true
     # If true, when the game starts a world border will start just outside of the arena
     # It will count down based on the time of the arena
     initiate-on-start: false
     # When the countdown for the arena will start
     # If `initiate-on-start` is true, the border will just countdown quicker at this time
     # (ex: 60 = 60 seconds left in the game)(needs to be in increments of 30)
-    countdown-start: 60
+    countdown-start: 600
     # The time left for the border to stop (any amount, must be less than countdown-start)
     # (ex: if countdown-start = 60 and countdown-end = 30, once the border starts, the border will shrink to the centre in 30 seconds)
     # (ex: if countdown-start = 60 and countdown-end = 55, once the border starts, the border will shrink to the centre in 5 seconds)
-    countdown-end: 30
+    countdown-end: 60
     # Final border size from the centre outward
     final-border-size: 880
     # If true, the centre of the arena will be based on the first spawn location you set
