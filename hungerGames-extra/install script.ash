@@ -80,7 +80,7 @@ echo "Setting Eula"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/eula.txt -o eula.txt
 echo "----------------- Installing map ----------------------------"
 echo "Creating directories"
-[ -d "Lan-World/" ] && rm -r Lan-World
+[ -d "world/" ] && rm -r world
 [ -d "tmpMapClone/" ] && rm -r tmpMapClone
 echo "Downloading required files"
 mkdir tmpMapClone/
