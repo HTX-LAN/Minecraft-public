@@ -88,14 +88,15 @@ curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hun
 
 echo "Installing antiCheat"
 curl -L -s https://github.com/Rammelkast/AntiCheatReloaded/releases/download/1.9.5/AntiCheatReloaded.jar -o plugins/AntiCheatReloaded.jar
-curl -L -s https://github.com/dmulloy2/ProtocolLib/releases/download/4.5.1/ProtocolLib.jar -o plugins/ProtocolLib.jar
+ProtocolLib_version=4.5.1
+curl -L -s https://github.com/dmulloy2/ProtocolLib/releases/download/${ProtocolLib_version}/ProtocolLib.jar -o plugins/ProtocolLib.jar
 
 echo "Setting Eula"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/eula.txt -o eula.txt
 
 # Installing map
 if [ -n "${GITHUBCREDENTIALS}" ]; then
-    $world=Lan-World-2
+    world=Lan-World-2
     
     echo "----------------- Installing map ----------------------------"
     echo "Creating directories"

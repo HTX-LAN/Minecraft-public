@@ -45,19 +45,27 @@ fi
 curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
 
 echo -e "Downloading MC server.properties"
+if [ -f server.properties ]; then
+    mv server.properties server.properties.old
+fi
+echo -e "Downloading MC server.properties"
 curl -o server.properties https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/server.properties
+
 echo "Setting up server icon"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/server-icon.png -o server-icon.png
+
 #install plugins
 echo "----------------- Installing Plugins ----------------------------"
 echo "Creating plugin folder"
 [ ! -d "plugins/" ] &&  mkdir plugins
+
 echo "Installing powerRanks"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/PowerRanks.jar -o plugins/PowerRanks.jar
 echo "Creating configuration for PowerRanks"
 [ ! -d "plugins/PowerRanks/" ] && mkdir plugins/PowerRanks
 [ ! -d "plugins/PowerRanks/Ranks/" ] && mkdir plugins/PowerRanks/Ranks
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/PowerRanks/Ranks/Ranks.yml -o plugins/PowerRanks/Ranks/Ranks.yml
+
 echo "Installing hungerGames"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames.jar -o plugins/hungerGames.jar
 echo "Creating configuration for hungerGames"
@@ -65,19 +73,28 @@ echo "Creating configuration for hungerGames"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames/arenas.yml -o plugins/HungerGames/arenas.yml
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames/config.yml -o plugins/HungerGames/config.yml
 # curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames/items.yml -o plugins/HungerGames/items.yml
+
 echo "Installing WorldEdit"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/worldedit.jar -o plugins/wordedit.jar
+
 echo "Installing worldGuard"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/worldguard.jar -o plugins/worldguard.jar
+
 echo "Installing Multiverse-core"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/multiverse-core.jar -o plugins/multiverse-core.jar
+
 echo "Installing EssentialsX"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/EssentialsX.jar -o plugins/EssentialsX.jar
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/EssentialsXChat.jar -o plugins/EssentialsXChat.jar
+
 echo "Installing antiCheat"
 curl -L -s https://github.com/Rammelkast/AntiCheatReloaded/releases/download/1.9.5/AntiCheatReloaded.jar -o plugins/AntiCheatReloaded.jar
+ProtocolLib_version=4.5.1
+curl -L -s https://github.com/dmulloy2/ProtocolLib/releases/download/${ProtocolLib_version}/ProtocolLib.jar -o plugins/ProtocolLib.jar
+
 echo "Setting Eula"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/eula.txt -o eula.txt
+
 echo "----------------- Installing map ----------------------------"
 echo "Creating directories"
 [ -d "world/" ] && rm -r world
