@@ -95,15 +95,26 @@ curl -L -s https://github.com/dmulloy2/ProtocolLib/releases/download/${ProtocolL
 echo "Setting Eula"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/eula.txt -o eula.txt
 
-echo "----------------- Installing map ----------------------------"
-echo "Creating directories"
-[ -d "world/" ] && rm -r world
-[ -d "tmpMapClone/" ] && rm -r tmpMapClone
-echo "Downloading required files"
-mkdir tmpMapClone/
-git clone https://htxlan:HyV8utX37tQEYbTm@github.com/HTX-LAN/Minecraft.git tmpMapClone/
-echo "Moving map files"
-cp -r tmpMapClone/Hunger-games-extra/HG-world world
-echo "Cleaning up"
-rm -r tmpMapClone
-echo "Map installed successfully"
+# Installing map
+if [ -n "${GITHUBCREDENTIALS}" ]; then
+    world=Lan-World-2
+    
+    echo "----------------- Installing map ----------------------------"
+    echo "Creating directories"
+    [ -d "Lan-World/" ] && rm -r Lan-World
+    [ -d "tmpMapClone/" ] && rm -r tmpMapClone
+
+    echo "Downloading required files from github"
+    mkdir tmpMapClone/
+    git clone https://htxlan:${GITHUBCREDENTIALS}@github.com/HTX-LAN/Minecraft.git tmpMapClone/
+
+    echo "Moving map files"
+    cp -r tmpMapClone/Hunger-games/$world Lan-World
+
+    echo "Cleaning up"
+    rm -r tmpMapClone
+
+    echo "Map installed successfully"
+else
+    echo "----------------- Could not install the map ------------------"
+fi
