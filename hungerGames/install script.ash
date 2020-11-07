@@ -81,6 +81,7 @@ curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hun
 
 echo "Installing Multiverse-core"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/multiverse-core.jar -o plugins/multiverse-core.jar
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/Multiverse-core/worlds.yml -o plugins/Multiverse-core/worlds.yml
 
 echo "Installing EssentialsX"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsX.jar -o plugins/EssentialsX.jar
