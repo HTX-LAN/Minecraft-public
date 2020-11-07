@@ -97,7 +97,7 @@ curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hun
 
 # Installing map
 if [ -n "${GITHUBCREDENTIALS}" ]; then
-    world=Lan-World-2
+    world=HG-world
     
     echo "----------------- Installing map ----------------------------"
     echo "Creating directories"
@@ -109,7 +109,7 @@ if [ -n "${GITHUBCREDENTIALS}" ]; then
     git clone https://htxlan:${GITHUBCREDENTIALS}@github.com/HTX-LAN/Minecraft.git tmpMapClone/
 
     echo "Moving map files"
-    cp -r tmpMapClone/Hunger-games/$world Lan-World
+    cp -r tmpMapClone/Hunger-games-extra/$world world
 
     echo "Cleaning up"
     rm -r tmpMapClone
