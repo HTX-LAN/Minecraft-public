@@ -79,9 +79,10 @@ curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hun
 echo "Installing worldGuard"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/worldguard.jar -o plugins/worldguard.jar
 
-echo "Installing Multiverse-core"
+echo "Installing Multiverse-Core"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/multiverse-core.jar -o plugins/multiverse-core.jar
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/Multiverse-core/worlds.yml -o plugins/Multiverse-core/worlds.yml
+[ ! -d "plugins/Multiverse-Core/" ] &&  mkdir plugins/Multiverse-Core
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/Multiverse-Core/worlds.yml -o plugins/Multiverse-Core/worlds.yml
 
 echo "Installing EssentialsX"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsX.jar -o plugins/EssentialsX.jar
