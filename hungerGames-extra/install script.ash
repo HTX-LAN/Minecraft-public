@@ -67,7 +67,7 @@ echo "Creating configuration for PowerRanks"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/PowerRanks/Ranks/Ranks.yml -o plugins/PowerRanks/Ranks/Ranks.yml
 
 echo "Installing hungerGames"
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames.jar -o plugins/hungerGames.jar
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames.jar -o plugins/HungerGames.jar
 echo "Creating configuration for hungerGames"
 [ ! -d "plugins/hungerGames/" ] &&  mkdir plugins/hungerGames
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames/arenas.yml -o plugins/HungerGames/arenas.yml
