@@ -47,7 +47,7 @@ worlds:
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
-  Lobby:
+  lobby:
     ==: MVWorld
     hidden: 'false'
     alias: ''
@@ -57,7 +57,7 @@ worlds:
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'false'
-    difficulty: PEACEFULL
+    difficulty: PEACEFUL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -95,7 +95,7 @@ worlds:
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
-  Lobby_the_end:
+  lobby_the_end:
     ==: MVWorld
     hidden: 'false'
     alias: ''
