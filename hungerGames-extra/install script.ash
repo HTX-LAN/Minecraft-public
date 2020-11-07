@@ -89,6 +89,8 @@ curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hun
 
 echo "Installing antiCheat"
 curl -L -s https://github.com/Rammelkast/AntiCheatReloaded/releases/download/1.9.5/AntiCheatReloaded.jar -o plugins/AntiCheatReloaded.jar
+[ ! -d "plugins/AntiCheatReloaded/" ] &&  mkdir plugins/AntiCheatReloaded
+curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/AntiCheatReloaded/checks.yml -o plugins/AntiCheatReloaded/checks.yml
 ProtocolLib_version=4.5.1
 curl -L -s https://github.com/dmulloy2/ProtocolLib/releases/download/${ProtocolLib_version}/ProtocolLib.jar -o plugins/ProtocolLib.jar
 
