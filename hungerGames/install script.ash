@@ -110,8 +110,8 @@ if [ -n "${GITHUBCREDENTIALS}" ]; then
     git clone https://htxlan:${GITHUBCREDENTIALS}@github.com/HTX-LAN/Minecraft.git tmpMapClone/
 
     echo "Moving map files"
-    cp -r tmpMapClone/Hunger-games/$world Lan-World
-    cp -r tmpMapClone/Hunger-games/$world Lan-World-2
+    cp -r tmpMapClone/Hunger-games/$world lobby
+    cp -r tmpMapClone/Hunger-games/$world Kingdom
 
     echo "Cleaning up"
     rm -r tmpMapClone

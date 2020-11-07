@@ -1,5 +1,5 @@
 worlds:
-  Lan-World-2:
+  Kingdom:
     ==: MVWorld
     hidden: 'false'
     alias: ''
@@ -47,7 +47,7 @@ worlds:
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
-  Lan-World:
+  Lobby:
     ==: MVWorld
     hidden: 'false'
     alias: ''
@@ -95,7 +95,7 @@ worlds:
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
-  Lan-World_the_end:
+  Lobby_the_end:
     ==: MVWorld
     hidden: 'false'
     alias: ''
