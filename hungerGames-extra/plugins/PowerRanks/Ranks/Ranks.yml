@@ -3,9 +3,9 @@ Groups:
     Kriger:
         permissions:
         interance: []
-        prefix: '[&1riger&r]'
+        prefix: '[&1Kriger&r]'
         chat:
-            prefix: '[&1riger&r]'
+            prefix: '[&1Kriger&r]'
             suffix: ''
             chatColor: '&f'
             nameColor: '&f'
