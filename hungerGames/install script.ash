@@ -45,19 +45,26 @@ fi
 curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
 
 echo -e "Downloading MC server.properties"
+if [ -f server.properties ]; then
+    mv server.properties server.properties.old
+fi
 curl -o server.properties https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/server.properties
+
 echo "Setting up server icon"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/server-icon.png -o server-icon.png
+
 #install plugins
 echo "----------------- Installing Plugins ----------------------------"
 echo "Creating plugin folder"
 [ ! -d "plugins/" ] &&  mkdir plugins
+
 echo "Installing powerRanks"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/PowerRanks.jar -o plugins/PowerRanks.jar
 echo "Creating configuration for PowerRanks"
 [ ! -d "plugins/PowerRanks/" ] && mkdir plugins/PowerRanks
 [ ! -d "plugins/PowerRanks/Ranks/" ] && mkdir plugins/PowerRanks/Ranks
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/PowerRanks/Ranks/Ranks.yml -o plugins/PowerRanks/Ranks/Ranks.yml
+
 echo "Installing HungerGames"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames.jar -o plugins/HungerGames.jar
 echo "Creating configuration for HungerGames"
@@ -65,28 +72,48 @@ echo "Creating configuration for HungerGames"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames/arenas.yml -o plugins/HungerGames/arenas.yml
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames/config.yml -o plugins/HungerGames/config.yml
 # curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/HungerGames/items.yml -o plugins/HungerGames/items.yml
+
 echo "Installing WorldEdit"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/worldedit.jar -o plugins/wordedit.jar
+
 echo "Installing worldGuard"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/worldguard.jar -o plugins/worldguard.jar
+
 echo "Installing Multiverse-core"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/multiverse-core.jar -o plugins/multiverse-core.jar
+
 echo "Installing EssentialsX"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsX.jar -o plugins/EssentialsX.jar
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/plugins/EssentialsXChat.jar -o plugins/EssentialsXChat.jar
+
 echo "Installing antiCheat"
 curl -L -s https://github.com/Rammelkast/AntiCheatReloaded/releases/download/1.9.5/AntiCheatReloaded.jar -o plugins/AntiCheatReloaded.jar
+curl -L -s https://github.com/dmulloy2/ProtocolLib/releases/download/4.5.1/ProtocolLib.jar -o plugins/ProtocolLib.jar
+
 echo "Setting Eula"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames/eula.txt -o eula.txt
-echo "----------------- Installing map ----------------------------"
-echo "Creating directories"
-[ -d "Lan-World/" ] && rm -r Lan-World
-[ -d "tmpMapClone/" ] && rm -r tmpMapClone
-echo "Downloading required files"
-mkdir tmpMapClone/
-git clone https://htxlan:HyV8utX37tQEYbTm@github.com/HTX-LAN/Minecraft.git tmpMapClone/
-echo "Moving map files"
-cp -r tmpMapClone/Hunger-games/Lan-World-2 Lan-World
-echo "Cleaning up"
-rm -r tmpMapClone
-echo "Map installed successfully"
+
+# Installing map
+if [ -n "${GITHUBCREDENTIALS}" ]; then
+    $world=Lan-World-2
+    
+    echo "----------------- Installing map ----------------------------"
+    echo "Creating directories"
+    [ -d "Lan-World/" ] && rm -r Lan-World
+    [ -d "tmpMapClone/" ] && rm -r tmpMapClone
+
+    echo "Downloading required files from github"
+    mkdir tmpMapClone/
+    git clone https://htxlan:${GITHUBCREDENTIALS}@github.com/HTX-LAN/Minecraft.git tmpMapClone/
+
+    echo "Moving map files"
+    cp -r tmpMapClone/Hunger-games/$world Lan-World
+    cp -r tmpMapClone/Hunger-games/$world Lan-World-2
+
+    echo "Cleaning up"
+    rm -r tmpMapClone
+
+    echo "Map installed successfully"
+else
+    echo "----------------- Could not install the map ------------------"
+fi
