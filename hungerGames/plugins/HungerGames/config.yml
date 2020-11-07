@@ -82,7 +82,7 @@ world-border:
     enabled: true
     # If true, when the game starts a world border will start just outside of the arena
     # It will count down based on the time of the arena
-    initiate-on-start: false
+    initiate-on-start: true
     # When the countdown for the arena will start
     # If `initiate-on-start` is true, the border will just countdown quicker at this time
     # (ex: 60 = 60 seconds left in the game)(needs to be in increments of 30)
