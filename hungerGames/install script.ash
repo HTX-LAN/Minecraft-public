@@ -100,7 +100,7 @@ curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hun
 
 # Installing map
 if [ -n "${GITHUBCREDENTIALS}" ]; then
-    world=Lan-World-2
+    world=Lan-World-3
     
     echo "----------------- Installing map ----------------------------"
     echo "Creating directories"
