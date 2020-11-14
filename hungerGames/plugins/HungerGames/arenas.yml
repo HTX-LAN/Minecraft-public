@@ -11,7 +11,7 @@ arenas:
     info:
       cost: 0
       timer: 1500
-      min-players: 2
+      min-players: 41
       max-players: 40
     commands:
     - none
