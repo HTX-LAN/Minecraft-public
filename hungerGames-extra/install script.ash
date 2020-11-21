@@ -59,12 +59,12 @@ echo "----------------- Installing Plugins ----------------------------"
 echo "Creating plugin folder"
 [ ! -d "plugins/" ] &&  mkdir plugins
 
-echo "Installing powerRanks"
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/PowerRanks.jar -o plugins/PowerRanks.jar
-echo "Creating configuration for PowerRanks"
-[ ! -d "plugins/PowerRanks/" ] && mkdir plugins/PowerRanks
-[ ! -d "plugins/PowerRanks/Ranks/" ] && mkdir plugins/PowerRanks/Ranks
-curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/PowerRanks/Ranks/Ranks.yml -o plugins/PowerRanks/Ranks/Ranks.yml
+# echo "Installing powerRanks"
+# curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/PowerRanks.jar -o plugins/PowerRanks.jar
+# echo "Creating configuration for PowerRanks"
+# [ ! -d "plugins/PowerRanks/" ] && mkdir plugins/PowerRanks
+# [ ! -d "plugins/PowerRanks/Ranks/" ] && mkdir plugins/PowerRanks/Ranks
+# curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/PowerRanks/Ranks/Ranks.yml -o plugins/PowerRanks/Ranks/Ranks.yml
 
 echo "Installing hungerGames"
 curl -L -s https://raw.githubusercontent.com/HTX-LAN/Minecraft-public/master/hungerGames-extra/plugins/HungerGames.jar -o plugins/HungerGames.jar
